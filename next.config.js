@@ -2,6 +2,6 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ["p0.meituan.net"],
+    domains: ["p0.meituan.net", "qqweb.top"],
   },
 };
