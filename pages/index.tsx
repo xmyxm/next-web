@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
@@ -22,11 +23,12 @@ const Home: NextPage = () => {
         </p>
 
         <div className={styles.grid}>
-          <a href="/csr" className={styles.card}>
-            <h2>CSR &rarr;</h2>
-            <p>客户端渲染页面示例.</p>
-          </a>
-
+          <Link href="/csr">
+            <a className={styles.card}>
+              <h2>CSR &rarr;</h2>
+              <p>客户端渲染页面示例.</p>
+            </a>
+          </Link>
           <a href="https://nextjs.org/learn" className={styles.card}>
             <h2>SSR &rarr;</h2>
             <p>服务端渲染示例</p>
