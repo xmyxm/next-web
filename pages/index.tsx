@@ -35,6 +35,11 @@ const entryList = [
     content: "增量静态生成",
     src: "/isr",
   },
+  {
+    title: "魔法渲染",
+    content: "getStaticProps",
+    src: "/magic",
+  },
 ];
 
 const Home: NextPage = () => {
