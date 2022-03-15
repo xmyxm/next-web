@@ -32,7 +32,7 @@ const ISRPage: NextPage = ({ docInfo }: any) => {
 
         <p className={styles.description}>
           <code className={styles.code}>
-            核心点在于通过getStaticProps获取数据，并在返回的数据中设置revalidate来控制编译更新的
+            核心点在于通过getStaticProps获取数据，并在返回的数据中设置revalidate来控制编译更新的，这个策略特别适合新闻或者博客内容的更新
           </code>
         </p>
 
