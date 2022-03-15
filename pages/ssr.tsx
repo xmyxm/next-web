@@ -29,14 +29,13 @@ const SSRPage: NextPage = ({ data }: any) => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          体验{" "}
-          <a href="https://nextjs.org">
-            CSR two-pass rendering OR import + ssr: false
-          </a>
+          CSR <p> getServerSideProps</p>
         </h1>
 
         <p className={styles.description}>
-          当前页面路径 <code className={styles.code}>/csr</code>
+          <code className={styles.code}>
+            服务端执行getServerSideProps，并把返回的数据传递给组件去渲染
+          </code>
         </p>
 
         <div className={styles.grid}>

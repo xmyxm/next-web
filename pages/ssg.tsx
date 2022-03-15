@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import axios from "axios";
+import { useEffect, useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
@@ -12,6 +12,14 @@ export async function getStaticProps() {
 
 const SSGPage: NextPage = ({ docInfo }: any) => {
   const { title, author, content } = docInfo;
+  const [text, setText] = useState("");
+
+  useEffect(() => {
+    setTimeout(() => {
+      setText(" + CSR");
+    }, 1000);
+  });
+
   return (
     <div className={styles.container}>
       <Head>
@@ -22,11 +30,14 @@ const SSGPage: NextPage = ({ docInfo }: any) => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          体验 <a>SSG</a>
+          SSG{text}
+          <p>getStaticProps</p>
         </h1>
 
         <p className={styles.description}>
-          当前页面路径 <code className={styles.code}>/ssg</code>
+          <code className={styles.code}>
+            编译时调用getStaticProps，并把对应的数据传递给组件渲染成一张完整页面，再保存为一张静态页面
+          </code>
         </p>
 
         <div className={styles.grid}>

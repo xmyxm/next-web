@@ -56,14 +56,18 @@ const CSRPage: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          体验{" "}
-          <a href="https://nextjs.org">
-            CSR two-pass rendering OR import + ssr: false
-          </a>
+          CSR (SSR+CSR)
+          <p>two-pass rendering OR import + ssr: false</p>
         </h1>
 
         <p className={styles.description}>
-          当前页面路径 <code className={styles.code}>/csr</code>
+          <code className={styles.code}>
+            nextjs
+            并没有完全的csr，此方案为部分csr，也就是这个页面部分代码也会在服务端渲染执行，useEffect
+            钩子只会在客户端触发，我们通过 useEffect
+            在客户端请求数据更新页面，第二点我们通过使用next.js提供的动态import
+            + 禁用SSR{" "}
+          </code>
         </p>
 
         <div className={styles.grid}>

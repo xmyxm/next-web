@@ -6,6 +6,11 @@ import styles from "../styles/Home.module.css";
 
 const entryList = [
   {
+    title: "动态路由",
+    content: "动态页面示例",
+    src: "/num/1",
+  },
+  {
     title: "CSR",
     content: "客户端渲染页面示例",
     src: "/csr",
@@ -19,6 +24,11 @@ const entryList = [
     title: "SSG",
     content: "静态生成示例",
     src: "/ssg",
+  },
+  {
+    title: "动态SSG",
+    content: "动态生成静态页面示例",
+    src: "/doc/1",
   },
   {
     title: "ISR",
@@ -38,7 +48,7 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <a>Next.js!</a>
         </h1>
 
         <p className={styles.description}>
