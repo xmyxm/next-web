@@ -17,7 +17,7 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  log.info(req.url || "");
+  log.info(`打印Url地址：${req.url}`);
   res.status(200).json({
     code: 200,
     data: {
