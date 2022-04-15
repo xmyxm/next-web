@@ -7,7 +7,7 @@ import styles from "../styles/Home.module.css";
 export async function getServerSideProps() {
   // 调用外部 API 获取内容
   const result = await axios
-    .post("http://127.0.0.1:3000/api/getssrdata")
+    .post("http://localhost:3000/api/getssrdata")
     .then((res) => {
       return res?.data;
     });
@@ -18,6 +18,7 @@ export async function getServerSideProps() {
 }
 
 const SSRPage: NextPage = ({ data }: any) => {
+  
   const { imgTitle, imgUrl } = data;
   return (
     <div className={styles.container}>
@@ -61,5 +62,17 @@ const SSRPage: NextPage = ({ data }: any) => {
     </div>
   );
 };
+
+// SSRPage.getInitialProps = async ctx => {
+//   console.log(`打印：SSR 页面 getInitialProps ${Date.now()}`, ctx)
+//     // 调用外部 API 获取内容
+//   const result = await axios
+//     .post("http://localhost:3000/api/getssrdata")
+//     .then((res) => {
+//       return res?.data;
+//     });
+//   const { data } = result;
+//   return { data }
+// }
 
 export default SSRPage;
