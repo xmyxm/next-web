@@ -63,7 +63,7 @@ const Home: NextPage = () => {
         <div className={styles.grid}>
           {entryList.map(({ title, content, src }) => {
             return (
-              <Link key={src} href={src}>
+              <Link key={src} href={src} prefetch={true}>
                 <a className={styles.card}>
                   <h2>{title} &rarr;</h2>
                   <p>{content}</p>

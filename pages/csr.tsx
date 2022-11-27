@@ -11,16 +11,19 @@ const DynamicImage = dynamic(() => import("../component/image"), {
 });
 
 async function getData() {
+  
   const data = await axios
     .post("/api/getcsrdata")
     .then((res) => {
       return res?.data;
     })
     .catch((err) => ({ serverTime: 0, weekDate: "", hms: "" }));
+  
   return data;
 }
 
 const CSRPage: NextPage = () => {
+
   const [isClientSide, setIsClientSide] = useState(false);
 
   const [csrInfo, setCSRInfo] = useState({

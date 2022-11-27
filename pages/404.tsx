@@ -4,7 +4,9 @@ export default function Custom404() {
       <div className="cu-box">
         <h1>404，页面不见了</h1>
       </div>
-      <style jsx>{`
+
+      <style jsx>
+        {`
         .cu-box {
           width: 100vh;
           height: 100vh;
@@ -12,7 +14,9 @@ export default function Custom404() {
           justify-content: center;
           align-items: center;
         }
-      `}</style>
+      `}
+      </style>
+      
     </>
   );
 }
